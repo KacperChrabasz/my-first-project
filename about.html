@@ -3,29 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All About Minecraft</title>
+    <title>About Minecraft</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: white;
+            background: linear-gradient(135deg, #0f2027, #1f3b2d, #2c5364);
+            background-attachment: fixed;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        h2 {
+            color: #7ee081;
+            margin-top: 40px;
+        }
+
+        a {
+            color: white;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 8px 18px;
+            margin: 4px 4px 4px 0;
+            background-color: #7ee081;
+            color: #0e1a12;
+            font-weight: bold;
+            text-decoration: none;
+            text-shadow: none;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .button:hover {
+            background-color: #a4f0a6;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>All About Minecraft</h1>
-        <nav>
-        <a href="index.html">Home</a> 
-        <a href="about.html">About</a>
-        </nav>
-    </header>
+    <div class="container">
 
-    <main>
-        <section>
-            <h2>History of Minecraft</h2>
-            <p>Minecraft was created by Markus "Notch" Persson and was first released to the public as a developmental release on May 17, 2009. The game quickly gained popularity, leading to the formation of Mojang Studios and the official release of Minecraft on November 18, 2011. Since then, it has become one of the best-selling video games of all time, with a large and active player community.</p>
-        </section>
-        <section>
-            <h2>Impact on Gaming Culture</h2>
-            <p>Minecraft has had a significant impact on gaming culture, inspiring countless players to create their own content, including mods, custom maps, and YouTube videos. The game's open-ended nature encourages creativity and problem-solving, making it popular among players of all ages. Additionally, Minecraft has been used in educational settings to teach subjects such as mathematics, history, and computer programming.</p>
-        </section>
-    </main>
-    <footer>
-        <p>Made by: kacper, 2026</p>
-    </footer>
+        <nav>
+            <a class="button" href="index.html">Home</a>
+            <a class="button" href="about.html">About</a>
+        </nav>
+
+        <h1>About Minecraft</h1>
+
+        <h2>History of Minecraft</h2>
+        <p>Minecraft was created by Markus "Notch" Persson and was first released to the public as a developmental release on May 17, 2009. The game quickly gained popularity, leading to the formation of Mojang Studios and the official release of Minecraft on November 18, 2011. Since then, it has become one of the best-selling video games of all time, with a large and active player community.</p>
+
+        <h2>Impact on gaming culture</h2>
+        <p>Minecraft has had a significant impact on gaming culture, inspiring countless players to create their own content, including mods, custom maps, and YouTube videos. The game's open-ended nature encourages creativity and problem-solving, making it popular among players of all ages. Additionally, Minecraft has been used in educational settings to teach subjects such as mathematics, history, and computer programming.</p>
+
+        <footer>
+            <p>Made by: Kacper, 2026</p>
+        </footer>
+
+    </div>
 </body>
 </html>

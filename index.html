@@ -3,41 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>all about minecraft</title>
+    <title>All about Minecraft</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: white;
+            background: linear-gradient(135deg, #0f2027, #1f3b2d, #2c5364);
+            background-attachment: fixed;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        h2 {
+            color: #7ee081;
+            margin-top: 40px;
+        }
+
+        a {
+            color: white;
+        }
+
+        /* Buttons */
+        .button {
+            display: inline-block;
+            padding: 8px 18px;
+            margin: 4px 4px 4px 0;
+            background-color: #7ee081;
+            color: #0e1a12;
+            font-weight: bold;
+            text-decoration: none;
+            text-shadow: none;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .button:hover {
+            background-color: #a4f0a6;
+        }
+
+        /* Photos */
+        .photo {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            border: 4px solid white;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Tables (rounded) */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 24px;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        th + th,
+        td + td {
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        th {
+            background-color: rgba(126, 224, 129, 0.25);
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
 </head>
 <body>
-    <h1>all about minecraft</h1>
-    <h2>what is minecraft?</h2>
-    <p>Minecraft is a sandbox video game developed by Mojang Studios. It allows players to explore a blocky, procedurally generated 3D world, discover and extract raw materials, craft tools and items, and build structures or earthworks. Players can also engage in combat with computer-controlled "mobs" and cooperate with or compete against other players in the same world.</p>
-    <h2>game modes</h2>
-    <p>Minecraft offers several game modes, including:</p>
-    <ul>
-        <li>Survival Mode: Players must acquire resources to build the world and maintain health.</li>
-        <li>Creative Mode: Players have unlimited resources to build with and the ability to fly.</li>
-        <li>Adventure Mode: Players can play custom maps created by other players with certain restrictions.</li>
-        <li>Spectator Mode: Players can freely move throughout a world without being affected by gravity or other game mechanics.</li>
-    </ul>
-    <a href="https://www.minecraft.net/en-us">click here to go to the official minecraft website</a>
-    <img src="images\1090-1920x1080-desktop-1080p-minecraft-wallpaper.jpg" alt="minecraft wallpaper" width="500" height="300">
-    <header>
-        <h1>all about minecraft</h1>
+    <div class="container">
+
         <nav>
-        <a href="index.html">Home</a> 
-        <a href="about.html">About</a>
+            <a class="button" href="index.html">Home</a>
+            <a class="button" href="about.html">About</a>
         </nav>
-    </header>
-    <main>
-        <section>
-            <h2>History of Minecraft</h2>
-            <p>Minecraft was created by Markus "Notch" Persson and was first released to the public as a developmental release on May 17, 2009. The game quickly gained popularity, leading to the formation of Mojang Studios and the official release of Minecraft on November 18, 2011. Since then, it has become one of the best-selling video games of all time, with a large and active player community.</p>
-        </section>
-        <section>
-            <h2>Impact on Gaming Culture</h2>
-            <p>Minecraft has had a significant impact on gaming culture, inspiring countless players to create their own content, including mods, custom maps, and YouTube videos. The game's open-ended nature encourages creativity and problem-solving, making it popular among players of all ages. Additionally, Minecraft has been used in educational settings to teach subjects such as mathematics, history, and computer programming.</p>
-        </section>
-    </main>
-    <footer>
-        <p>Made by: kacper, 2026</p>
-    </footer>
+
+        <h1 id="top">All about Minecraft</h1>
+
+        <p>Jump to:
+            <a href="#modes">Game modes</a> |
+            <a href="#dimensions">Dimensions</a> |
+            <a href="#mobs">Mobs</a> |
+            <a href="#tips">Beginner tips</a> |
+            <a href="#videos">Videos</a> |
+            <a href="#facts">Fun facts</a>
+        </p>
+
+        <img class="photo" src="images/1090-1920x1080-desktop-1080p-minecraft-wallpaper.jpg" alt="Minecraft wallpaper" width="700">
+
+        <h2>What is Minecraft?</h2>
+        <p>Minecraft is a sandbox video game developed by Mojang Studios. It allows players to explore a blocky, procedurally generated 3D world, discover and extract raw materials, craft tools and items, and build structures or earthworks. Players can also engage in combat with computer-controlled "mobs" and cooperate with or compete against other players in the same world.</p>
+
+        <h2 id="modes">Game modes</h2>
+        <p>Minecraft offers several game modes, including:</p>
+        <table>
+            <tr>
+                <th>Mode</th>
+                <th>What you do</th>
+            </tr>
+            <tr>
+                <td>Survival</td>
+                <td>Players must acquire resources to build the world and maintain health.</td>
+            </tr>
+            <tr>
+                <td>Creative</td>
+                <td>Players have unlimited resources to build with and the ability to fly.</td>
+            </tr>
+            <tr>
+                <td>Adventure</td>
+                <td>Players can play custom maps created by other players with certain restrictions.</td>
+            </tr>
+            <tr>
+                <td>Spectator</td>
+                <td>Players can freely move throughout a world without being affected by gravity or other game mechanics.</td>
+            </tr>
+        </table>
+
+        <h2 id="dimensions">The three dimensions</h2>
+        <p>The game world is split into three dimensions, each with its own look and dangers.</p>
+        <table>
+            <tr>
+                <th>Dimension</th>
+                <th>What it is</th>
+            </tr>
+            <tr>
+                <td>The Overworld</td>
+                <td>The main world, with forests, mountains, oceans, caves and villages. Every player starts here.</td>
+            </tr>
+            <tr>
+                <td>The Nether</td>
+                <td>A hot and dangerous dimension full of lava. You reach it by building a portal out of obsidian.</td>
+            </tr>
+            <tr>
+                <td>The End</td>
+                <td>A dark dimension of floating islands where the Ender Dragon lives. You enter it through a portal hidden in a stronghold.</td>
+            </tr>
+        </table>
+
+        <img class="photo" src="images/overworld.jpg" alt="The Overworld" width="500">
+        <img class="photo" src="images/bttn-header.webp" alt="The Nether" width="500">
+        <img class="photo" src="images/5987432.jpg" alt="The End" width="500">
+
+        <h2 id="mobs">Popular mobs</h2>
+        <p>Mobs are the creatures you meet in the game. Some attack you, some ignore you, and some help you.</p>
+        <table>
+            <tr>
+                <th>Mob</th>
+                <th>Type</th>
+                <th>What it does</th>
+            </tr>
+            <tr>
+                <td>Creeper</td>
+                <td>Hostile</td>
+                <td>Sneaks up on you and explodes.</td>
+            </tr>
+            <tr>
+                <td>Zombie</td>
+                <td>Hostile</td>
+                <td>Walks toward you and attacks, mostly at night.</td>
+            </tr>
+            <tr>
+                <td>Skeleton</td>
+                <td>Hostile</td>
+                <td>Shoots arrows from a distance.</td>
+            </tr>
+            <tr>
+                <td>Enderman</td>
+                <td>Neutral</td>
+                <td>Teleports around and gets angry if you look at it.</td>
+            </tr>
+            <tr>
+                <td>Villager</td>
+                <td>Passive</td>
+                <td>Lives in villages and trades items with you.</td>
+            </tr>
+            <tr>
+                <td>Iron Golem</td>
+                <td>Neutral</td>
+                <td>Protects villages from hostile mobs.</td>
+            </tr>
+        </table>
+
+        <img class="photo" src="images/mobs.jpg.webp" alt="Minecraft mobs" width="500">
+
+        <h2 id="tips">Tips for beginners</h2>
+        <p>Follow these steps to survive your first day:</p>
+        <ol>
+            <li>Punch a tree to collect wood.</li>
+            <li>Make a crafting table, then craft wooden tools.</li>
+            <li>Find food, like meat from animals, so your hunger bar doesn't run out.</li>
+            <li>Build a simple shelter before night, because hostile mobs appear in the dark.</li>
+            <li>Place torches to light up caves and your base.</li>
+            <li>Don't dig straight down, because you might fall into lava.</li>
+        </ol>
+
+        <h2 id="videos">Videos</h2>
+        <p>Want to see the game in action? These links open YouTube in a new tab.</p>
+        <p>
+            <a class="button" href="https://www.youtube.com/@minecraft" target="_blank" rel="noopener">Official Minecraft channel</a>
+            <a class="button" href="https://www.youtube.com/results?search_query=minecraft+official+trailer" target="_blank" rel="noopener">Trailers</a>
+            <a class="button" href="https://www.youtube.com/results?search_query=minecraft+beginner+tutorial" target="_blank" rel="noopener">Beginner tutorials</a>
+            <a class="button" href="https://www.youtube.com/results?search_query=minecraft+amazing+builds" target="_blank" rel="noopener">Amazing builds</a>
+        </p>
+
+        <h2>History of Minecraft</h2>
+        <p>Minecraft was created by Markus "Notch" Persson and was first released to the public as a developmental release on May 17, 2009. The game quickly gained popularity, leading to the formation of Mojang Studios and the official release of Minecraft on November 18, 2011. Since then, it has become one of the best-selling video games of all time, with a large and active player community.</p>
+
+        <h2>Impact on gaming culture</h2>
+        <p>Minecraft has had a significant impact on gaming culture, inspiring countless players to create their own content, including mods, custom maps, and YouTube videos. The game's open-ended nature encourages creativity and problem-solving, making it popular among players of all ages. Additionally, Minecraft has been used in educational settings to teach subjects such as mathematics, history, and computer programming.</p>
+
+        <img class="photo" src="images/builds.jpg" alt="Minecraft builds" width="500">
+
+        <h2 id="facts">Fun facts</h2>
+        <ul>
+            <li>Minecraft was originally programmed in Java.</li>
+            <li>Microsoft bought Mojang in 2014.</li>
+            <li>The Creeper started as a mistake: its creator was trying to make a pig and mixed up the height and width.</li>
+            <li>The game has sold over 300 million copies.</li>
+        </ul>
+
+        <p><a class="button" href="https://www.minecraft.net/en-us">Official Minecraft website</a></p>
+        <p><a href="#top">Back to top</a></p>
+
+        <footer>
+            <p>Made by: Kacper, 2026</p>
+        </footer>
+
+    </div>
 </body>
 </html>
