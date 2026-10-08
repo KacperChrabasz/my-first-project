@@ -95,7 +95,8 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* ===== NEW: styles for the JavaScript features ===== */
+
+/* ===== JavaScript features ===== */
 
 html {
     scroll-behavior: smooth;
@@ -107,6 +108,12 @@ html {
     }
 }
 
+/* Makes the "hidden" attribute work on every element */
+[hidden] {
+    display: none !important;
+}
+
+/* Reading progress bar */
 #progress-bar {
     position: fixed;
     top: 0;
@@ -117,6 +124,7 @@ html {
     z-index: 100;
 }
 
+/* Back to top button */
 #top-button {
     position: fixed;
     right: 20px;
@@ -140,6 +148,7 @@ html {
     pointer-events: auto;
 }
 
+/* <button> elements that look like your .button links */
 button.button {
     border: none;
     font-family: inherit;
@@ -147,6 +156,7 @@ button.button {
     cursor: pointer;
 }
 
+/* Mob filter */
 .filter-button {
     opacity: 0.6;
 }
@@ -156,6 +166,7 @@ button.button {
     outline: 2px solid white;
 }
 
+/* Beginner tips checklist */
 #tips ~ ol li {
     cursor: pointer;
     padding: 2px 0;
@@ -166,7 +177,182 @@ button.button {
     opacity: 0.6;
 }
 
+/* Keyboard focus */
 button:focus-visible {
     outline: 3px solid white;
     outline-offset: 2px;
+}
+
+/* Search bar */
+#search-box {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+}
+
+#search-box::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#search-result {
+    margin: 6px 0;
+    min-height: 1.5em;
+}
+
+.search-hidden {
+    display: none !important;
+}
+
+/* Quiz */
+.quiz-card {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.quiz-card h3 {
+    margin-top: 0;
+}
+
+.quiz-info {
+    margin-top: 0;
+    opacity: 0.8;
+}
+
+.quiz-option {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px 16px;
+    text-align: left;
+    font-family: inherit;
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.quiz-option:hover:not(:disabled) {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.quiz-option:disabled {
+    cursor: default;
+}
+
+.quiz-option.correct {
+    background-color: #7ee081;
+    color: #0e1a12;
+    border-color: #7ee081;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+.quiz-option.wrong {
+    background-color: #ff6b6b;
+    color: #2a0a0a;
+    border-color: #ff6b6b;
+    text-shadow: none;
+}
+
+
+/* ===== Light theme (used when the body has the class "light") ===== */
+
+body.light {
+    background-image: linear-gradient(135deg, #e8f5e9, #d7ecf5);
+    color: #0e1a12;
+    text-shadow: none;
+}
+
+body.light h1,
+body.light h2 {
+    text-shadow: none;
+}
+
+body.light h2 {
+    color: #1b7a2a;
+}
+
+body.light a:not(.button) {
+    color: #0b3d91;
+}
+
+body.light table {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+body.light th,
+body.light td {
+    border-bottom-color: rgba(0, 0, 0, 0.15);
+}
+
+body.light th + th,
+body.light td + td {
+    border-left-color: rgba(0, 0, 0, 0.15);
+}
+
+body.light th {
+    background-color: rgba(46, 160, 67, 0.25);
+}
+
+body.light footer {
+    border-top-color: rgba(0, 0, 0, 0.3);
+}
+
+body.light .filter-button.active {
+    outline-color: #0e1a12;
+}
+
+body.light #search-box {
+    color: #0e1a12;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+body.light #search-box::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+body.light .quiz-card {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+body.light .quiz-option {
+    color: #0e1a12;
+    background-color: rgba(0, 0, 0, 0.06);
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+body.light .quiz-option:hover:not(:disabled) {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+body.light .quiz-option.correct {
+    background-color: #7ee081;
+    color: #0e1a12;
+    border-color: #4fb552;
+}
+
+body.light .quiz-option.wrong {
+    background-color: #ff6b6b;
+    color: #2a0a0a;
+    border-color: #d94a4a;
+}
+
+body.light button:focus-visible {
+    outline-color: #0e1a12;
 }
