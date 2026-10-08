@@ -12,3 +12,12 @@ if (greeting) {
 
     greeting.textContent = `Good ${timeOfDay}, and welcome to my Minecraft page!`;
 }
+const progressBar = document.createElement("div");
+progressBar.id = "progress-bar";
+document.body.appendChild(progressBar);
+
+function updateProgress() {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+    progressBar.style.width = percent + "%";
+}
