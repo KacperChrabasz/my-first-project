@@ -95,3 +95,12 @@ footer {
     padding-top: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 0;
+    background-color: #7ee081;
+    z-index: 100;
+    }
